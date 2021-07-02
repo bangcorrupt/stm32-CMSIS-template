@@ -5,7 +5,7 @@
 int blink();
 
 int main() {
-	// Enable GPIOC Clock
+    // Enable GPIOC Clock
     RCC->AHB1ENR |= RCC_AHB1ENR_GPIOCEN;
 	
     // GPIO_13 Output
