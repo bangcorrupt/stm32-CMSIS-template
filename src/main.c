@@ -6,14 +6,14 @@ int blink();
 
 int main() {
 	// Enable GPIOC Clock
-	RCC->AHB1ENR |= RCC_AHB1ENR_GPIOCEN;
+    RCC->AHB1ENR |= RCC_AHB1ENR_GPIOCEN;
 	
     // GPIO_13 Output
-	GPIOC->MODER |= GPIO_MODER_MODER13_0;       // Set first bit
+    GPIOC->MODER |= GPIO_MODER_MODER13_0;       // Set first bit
     GPIOC->MODER &= ~(GPIO_MODER_MODER13_1);    // Clear second bit
 	
     // GPIO_13 High speed
-	GPIOC->OSPEEDR |= GPIO_OSPEEDR_OSPEED13;
+    GPIOC->OSPEEDR |= GPIO_OSPEEDR_OSPEED13;
      
     while(1) {
         blink();
